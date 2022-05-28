@@ -15,7 +15,7 @@ body{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-image: url(/img/3959318.webp);
+    background-image: url(../img/3959318.webp);
     background-size: cover;
 }
 .game-area{
