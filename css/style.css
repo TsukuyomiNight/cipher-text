@@ -8,8 +8,8 @@
 }
 body{
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    height: auto;
     background-color: aliceblue;
     display: flex;
     justify-content: space-around;
@@ -20,7 +20,7 @@ body{
 }
 .game-area{
     width: 80%;
-    height: 80%;
+    height: 80vh;
     border: 10px double rgb(255, 255, 255);
     border-radius: 20px;
     background-color: rgba(192, 192, 192, 0.902);
@@ -36,7 +36,8 @@ body{
 }
 h1{
     font-size: 50px;
-    color: rgb(0, 21, 51);
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px black;
     font-weight: bolder;
 }
 span{
@@ -67,8 +68,6 @@ option{
     overflow-y: hidden;
     overflow-x: hidden;
     resize: none;
-    inherits: none;
-    user-select: none;
     outline: none;
     color: black;
     background-color: white;
@@ -88,6 +87,28 @@ button{
     font-size: 40px;
     overflow-y: scroll;
     overflow-x: hidden;
-    inherits: none;
     resize: none;
+    outline: none;
+}
+
+
+@media (max-width:600px){
+    .game-area{
+        flex-direction: column;
+        min-height: 100vh;
+        height: auto;
+    }
+    .create , .know{
+        width: 100%;
+        height: 50vh;
+    }
+    span{
+        font-size: 20px;
+    }
+    .text-place , .text-place-know{
+        font-size: 20px;
+    }
+    .result , .result-know{
+        font-size: 20px;
+    }
 }
