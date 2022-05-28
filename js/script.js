@@ -157,8 +157,14 @@ function hidingAlt(symb,result) {
     setInterval(() => {
         time = new Date();
         hours = time.getUTCHours();
-        randomNumfirst = hours + hours + hours + 56 - 31;
-        randomNumSec = hours * hours;
+        randomNumfirst = hours - day + hours + month + 56 - 31;
+        randomNumSec = hours * hours + day + month;
+        if(randomNumSec == 0 || randomNumSec == 1){
+            randomNumSec = 2;
+        }
+        else if(randomNumfirst == 0 || randomNumfirst == 1){
+            randomNumfirst = 2;
+        }
         let SymbNew = "";
         for (let i = symb.length - 1; i >= 0; i--) {
             if(i %2!= 0){
