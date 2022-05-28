@@ -117,7 +117,6 @@ function changeSecondAlt(symb,result){
 
 
 function hiding(symb,result) {
-    setInterval(() => {
         time = new Date();
         hours = time.getUTCHours();
         day = time.getDate();
@@ -150,13 +149,13 @@ function hiding(symb,result) {
             }
         }
             result.textContent = SymbNew;
-    }, 1000);
 }
 
 function hidingAlt(symb,result) {
-    setInterval(() => {
         time = new Date();
         hours = time.getUTCHours();
+        day = time.getDate();
+        month = time.getMonth() + 1;
         randomNumfirst = hours - day + hours + month + 56 - 31;
         randomNumSec = hours * hours + day + month;
         if(randomNumSec == 0 || randomNumSec == 1){
@@ -185,7 +184,6 @@ function hidingAlt(symb,result) {
             }
         }
             result.textContent = SymbNew;
-    }, 1000);
 }
 
 
